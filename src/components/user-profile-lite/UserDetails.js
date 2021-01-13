@@ -1,5 +1,6 @@
 import React from "react";
 // import PropTypes from "prop-types";
+
 import {
   Card,
   CardHeader,
@@ -11,6 +12,7 @@ import {
 import {Link} from 'react-router-dom'
 export default function UserDetails({ data }) {
   const [linkToMatch,setLinkToMatch]=React.useState("")
+
   React.useEffect(()=>{
     if(data.length!==0){
       setLinkToMatch("/match-of-user/"+data[0].id)

@@ -16,8 +16,11 @@ import {
 } from "shards-react";
 import CallAPI from '../../utils/callAPI'
 import {FormGroup,FormControlLabel,Switch} from '@material-ui/core';
+import useStyles from './style'
 
 export default function UserAccountDetails ({ data })  {
+  console.log(data[0])
+  const classes=useStyles()
   const [active,setActive]= React.useState(true);
   React.useEffect(()=>{
     if(data.length!==0){
@@ -118,7 +121,8 @@ export default function UserAccountDetails ({ data })  {
                 </Col>
               </Row>
             </Form>
-            <FormGroup>
+            {/* data.length===0? '' : data[0].roleId === '2' ? classes.hidecls : '' */}
+            <FormGroup className={data.length===0? '' : data[0].roleId.toString() === '2' ? classes.hidecls : ''}>
               <FormControlLabel
                 control={<Switch checked={active} onChange={changeStateAcc}/>}
                 label="Active"
