@@ -16,54 +16,54 @@ import MatchUser from './views/matchOfUser';
 // import { NotificationsNone } from "@material-ui/icons";
 export default [
   {
-    path: process.env.PUBLIC_URL+"/",
+    path: "/",
     exact: true,
     layout: DefaultLayout,
     component: () => <Redirect to="/user-management"/>
   },
   {
-    path:process.env.PUBLIC_URL+"/login",
+    path:"/login",
     exact: true,
     layout:loginLayout,
     component: SignIn
   },
   {
-    path: process.env.PUBLIC_URL+"/blog-overview",
+    path: "/blog-overview",
     layout: DefaultLayout,
     component: BlogOverview
   },
   {
-    path: process.env.PUBLIC_URL+"/user-profile-lite/:id",
+    path: "/user-profile-lite/:id",
     layout: DefaultLayout,
     component: (location)=><UserProfileLite location={location}/>
   },
   {
-    path: process.env.PUBLIC_URL+"/match-management",
+    path: "/match-management",
     layout: DefaultLayout,
     component: matchManage
   },
   {
-    path: process.env.PUBLIC_URL+"/chat_match/:id",
+    path: "/chat_match/:id",
     layout: DefaultLayout,
     component: (location)=><ChatManage location={location}/>
   },
   {
-    path : process.env.PUBLIC_URL+"/match-of-user/:id",
+    path : "/match-of-user/:id",
     layout: DefaultLayout,
     component: (location)=><MatchUser location = {location}/>
   },
   {
-    path: process.env.PUBLIC_URL+"/components-overview",
+    path: "/components-overview",
     layout: DefaultLayout,
     component: ComponentsOverview
   },
   {
-    path: process.env.PUBLIC_URL+"/user-management",
+    path: "/user-management",
     layout: DefaultLayout,
     component: Tables
   },
   {
-    path: process.env.PUBLIC_URL+"/blogPost",
+    path: "/blogPost",
     layout: DefaultLayout,
     component: BlogPosts
   }
