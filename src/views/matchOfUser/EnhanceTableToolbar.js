@@ -125,14 +125,14 @@ const EnhancedTableToolbar = (props) => {
             [classes.searchFocused]: isSearchOpen,
           })}
         >
-          <div
+          {/* <div
             className={classNames(classes.searchIcon, {
               [classes.searchIconOpened]: isSearchOpen,
             })}
             onClick={() => setSearchOpen(!isSearchOpen)}
           >
             <SearchIcon classes={{ root: classes.headerIcon }} />
-          </div>
+          </div> */}
           <InputBase
             placeholder="Search…"
             classes={{
@@ -145,7 +145,7 @@ const EnhancedTableToolbar = (props) => {
           />
         </div>
       </ClickAwayListener>
-      <Link to = {'/app/news/crud'} style = {{textDecoration: "none"}}>
+      {/* <Link to = {'/app/news/crud'} style = {{textDecoration: "none"}}>
         <Button
           variant="contained"
           color="primary"
@@ -154,7 +154,7 @@ const EnhancedTableToolbar = (props) => {
         >
           Add
         </Button>
-      </Link>
+      </Link> */}
 
     </Toolbar>
   );
