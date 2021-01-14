@@ -115,7 +115,7 @@ export default function EnhancedTable(props) {
                       <TableCell align="left">{row.player2}</TableCell>
                       <TableCell align="left">{row.winner}</TableCell>
                       <TableCell align="left">{convertDateToString(row.createdDate)}</TableCell>
-                      <TableCell align="left">{row.status.toString() === 1 ? 'Đã hoàn thành':'Chưa hoàn thành'}</TableCell>
+                      <TableCell align="left">{row.status.toString() === '0' ? 'Chưa hoàn thành':'Đã hoàn thành'}</TableCell>
                       <TableCell align="left">{row.password}</TableCell>
                       <TableCell>
                         <Link to = {`/chat_match/${row.id}`} style = {{textDecoration: "none"}}>

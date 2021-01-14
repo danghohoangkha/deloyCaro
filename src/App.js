@@ -10,8 +10,7 @@ import "./shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
 export default () => {
   return (
     <LoginProvider>
-      {/* basename={process.env.REACT_APP_BASENAME || "" */}
-      <Router >
+      <Router basename={process.env.REACT_APP_BASENAME || ""}>
         <div>
           {
             routes.map((route, index) => {
@@ -20,13 +19,13 @@ export default () => {
                   key={index}
                   path={route.path}
                   exact={route.exact}
-                  component={props => {
+                  component={withTracker(props => {
                     return (
                       <route.layout {...props}>
                         <route.component {...props} />
                       </route.layout>
                     );
-                  }}
+                  })}
                 />
               );
             })}
