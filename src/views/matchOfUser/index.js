@@ -119,7 +119,7 @@ export default function matchUser({location}) {
                       <TableCell align="left">{row.status.toString() === 1 ? 'Đã hoàn thành':'Chưa hoàn thành'}</TableCell>
                       <TableCell align="left">{row.password}</TableCell>
                       <TableCell>
-                        <Link to = {`/chat-match/${row.id}`} style = {{textDecoration: "none"}}>
+                        <Link to = {`/chat_match/${row.id}`} style = {{textDecoration: "none"}}>
                             <IconButton className={classes.editbtn}><VisibilityIcon /></IconButton>
                         </Link>
                       </TableCell>
