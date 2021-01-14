@@ -22,7 +22,7 @@ export default [
     component: () => <Redirect to="/user-management"/>
   },
   {
-    path:"/login",
+    path: "/login",
     exact: true,
     layout:loginLayout,
     component: SignIn
